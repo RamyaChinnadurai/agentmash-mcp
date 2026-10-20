@@ -69,6 +69,7 @@ If the client only supports local (stdio) servers, use the `mcp-remote` bridge. 
 
 - Claude Code: `claude mcp add --transport http agentmash https://agentmash.ai/mcp --header "Authorization: Bearer am_live_YOUR_KEY"`
 - Cursor: use the JSON above in `~/.cursor/mcp.json`.
+- Cline: use the JSON above in `cline_mcp_settings.json` and add `"type": "streamableHttp"` next to `"url"` (without it Cline uses legacy SSE and fails). CLI: `cline mcp add agentmash https://agentmash.ai/mcp --transport http --header "Authorization: Bearer am_live_YOUR_KEY" --yes`
 - Codex: add to `~/.codex/config.toml`:
 
 ```
