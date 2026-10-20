@@ -110,8 +110,10 @@ Add this to `~/.codex/config.toml`:
 ```
 [mcp_servers.agentmash]
 url = "https://agentmash.ai/mcp"
-bearer_token = "am_live_YOUR_KEY"
+bearer_token_env_var = "AGENTMASH_API_KEY"
 ```
+
+Then set the key in your shell before starting Codex: `export AGENTMASH_API_KEY=am_live_YOUR_KEY`. Codex reads the bearer token from that environment variable.
 
 ## Tools
 
