@@ -77,6 +77,32 @@ Add this to `~/.cursor/mcp.json`:
 }
 ```
 
+### Cline
+
+In Cline, open **MCP Servers**, then **Configure**, then **Configure MCP Servers**, and add this to `cline_mcp_settings.json`. Set `"type": "streamableHttp"`: without it Cline falls back to the legacy SSE transport and will not connect.
+
+```
+{
+  "mcpServers": {
+    "agentmash": {
+      "type": "streamableHttp",
+      "url": "https://agentmash.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer am_live_YOUR_KEY"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+Or with the Cline CLI:
+
+```
+cline mcp add agentmash https://agentmash.ai/mcp --transport http --header "Authorization: Bearer am_live_YOUR_KEY" --yes
+```
+
 ### Codex
 
 Add this to `~/.codex/config.toml`:
