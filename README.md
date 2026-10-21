@@ -134,7 +134,7 @@ Open the **Agents & API** page in AgentMash and click **Revoke** on the key. Age
 
 ## Links
 
-- AgentMash: https://agentmash.ai
+- [AgentMash](https://agentmash.ai)
 - MCP setup guide: https://agentmash.ai/mcp-setup
 
 
